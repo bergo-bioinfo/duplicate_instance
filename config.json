@@ -1,0 +1,41 @@
+{
+    "framework-version": 3,
+    "name": "duplicate_instance",
+    "namespace": "InstitutBergonie\\DuplicateInstanceExternalModule",
+    "description": "Add a button in order to duplicate the current instance",
+    "authors": [
+        {
+            "name": "Augustin Moreau",
+            "email": "a.moreau@bordeaux.unicancer.fr",
+            "institution": "Institut Bergonié"
+        }
+    ],
+    "permissions": [
+        "redcap_data_entry_form"
+    ],
+    "project-settings": [
+        {
+            "key": "params",
+            "name": "Paramètres du module",
+            "type": "sub_settings",
+            "repeatable": true,
+            "sub_settings": [
+                {
+                    "key": "instruments",
+                    "name": "Instruments dupliquables",
+                    "required": true,
+                    "type": "form-list",
+                    "autocomplete": true
+                },
+                {
+                    "key": "fields",
+                    "name": "Champs à dupliquer",
+                    "required": true,
+                    "type": "field-list",
+                    "repeatable": true,
+                    "autocomplete": true
+                }
+            ]
+        }
+    ]
+}
