@@ -34,7 +34,7 @@ class DuplicateInstanceExternalModule extends \ExternalModules\AbstractExternalM
 				$current_url = "http";
 				$current_url .= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "s" : "";
 				$current_url .= "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-				$new_url = \preg_replace('/instance=\d/', 'instance='.$new_inst, $current_url);
+				$new_url = \preg_replace('/instance=\d+/', 'instance='.$new_inst, $current_url);
 				header("Location: ".$new_url);
 			}
 		}
